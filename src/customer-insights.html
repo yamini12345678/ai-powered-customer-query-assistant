@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Insights - Smart Retail Assistant</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="customer-insights.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-robot"></i>
+            <span>Smart Retail Assistant</span>
+        </div>
+        <div class="nav-links">
+            <a href="analytics-dashboard.html" class="nav-link">Dashboard</a>
+            <a href="home.html" class="nav-link">Home</a>
+        </div>
+    </nav>
+
+    <main class="insights-content">
+        <div class="insights-header">
+            <h1>Customer Insights</h1>
+            <div class="filter-controls">
+                <select id="timeFilter">
+                    <option value="30">Last 30 Days</option>
+                    <option value="90">Last 90 Days</option>
+                    <option value="180">Last 6 Months</option>
+                    <option value="365">Last Year</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="insights-grid">
+            <div class="insight-card customer-segments">
+                <h3>Customer Segments</h3>
+                <canvas id="segmentsChart"></canvas>
+            </div>
+
+            <div class="insight-card purchase-frequency">
+                <h3>Purchase Frequency</h3>
+                <canvas id="frequencyChart"></canvas>
+            </div>
+
+            <div class="insight-card customer-lifetime">
+                <h3>Customer Lifetime Value</h3>
+                <canvas id="lifetimeChart"></canvas>
+            </div>
+
+            <div class="insight-card retention-rate">
+                <h3>Retention Rate</h3>
+                <canvas id="retentionChart"></canvas>
+            </div>
+        </div>
+
+        <div class="customer-details">
+            <h2>Top Customers</h2>
+            <div class="customer-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Customer ID</th>
+                            <th>Total Purchases</th>
+                            <th>Lifetime Value</th>
+                            <th>Last Purchase</th>
+                            <th>Segment</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customerTableBody">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="behavior-patterns">
+            <h2>Behavior Patterns</h2>
+            <div class="patterns-grid">
+                <div class="pattern-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Peak Shopping Hours</h4>
+                    <div id="peakHours"></div>
+                </div>
+                <div class="pattern-card">
+                    <i class="fas fa-tags"></i>
+                    <h4>Popular Categories</h4>
+                    <div id="popularCategories"></div>
+                </div>
+                <div class="pattern-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h4>Average Cart Size</h4>
+                    <div id="cartSize"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="customer-insights.js"></script>
+</body>
+</html>

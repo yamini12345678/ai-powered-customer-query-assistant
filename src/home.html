@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Retail Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-robot"></i>
+            <span>Smart Retail Assistant</span>
+        </div>
+        <div class="top-nav">
+            <a href="knowledge-base.html" class="nav-button">
+                <i class="fas fa-book"></i>
+                Knowledge Base
+            </a>
+            <a href="faqs.html" class="nav-button">
+                <i class="fas fa-question-circle"></i>
+                FAQs
+            </a>
+            <button id="darkModeToggle" class="nav-button">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="clearChat" class="nav-button">
+                <i class="fas fa-broom"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="quick-actions">
+                <h3>Quick Actions</h3>
+                <button class="action-btn" data-query="Show all products">
+                    <i class="fas fa-list"></i> Show Products
+                </button>
+                <button class="action-btn" data-query="What are your shipping policies?">
+                    <i class="fas fa-truck"></i> Shipping Info
+                </button>
+                <button class="action-btn" data-query="Tell me about return policy">
+                    <i class="fas fa-undo"></i> Return Policy
+                </button>
+                <button class="action-btn" data-query="What warranty do you offer?">
+                    <i class="fas fa-shield-alt"></i> Warranty Info
+                </button>
+            </div>
+            <div class="chat-history">
+                <h3>Recent Chats</h3>
+                <div id="recentQueries"></div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2><i class="fas fa-robot"></i> Retail Assistant AI</h2>
+                <div class="status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Online</span>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="typing-indicator" id="typingIndicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <button id="voiceInput" class="voice-btn">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <input type="text" id="userInput" placeholder="Type your question here...">
+                <button id="sendButton">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="product-showcase">
+            <h3>Featured Products</h3>
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Smart Retail Assistant. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

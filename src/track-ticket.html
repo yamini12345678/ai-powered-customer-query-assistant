@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Support Ticket - Smart Retail Assistant</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="ticket.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-robot"></i>
+            <span>Smart Retail Assistant</span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="create-ticket.html" class="nav-link">Create Ticket</a>
+        </div>
+    </nav>
+
+    <main class="ticket-content">
+        <div class="ticket-container">
+            <h1><i class="fas fa-search"></i> Track Your Ticket</h1>
+            
+            <div class="search-section">
+                <form id="searchForm" class="search-form">
+                    <div class="search-group">
+                        <input type="text" id="ticketNumber" placeholder="Enter Ticket Number (e.g., TKT-1234567890)" required>
+                        <button type="submit" class="search-btn">
+                            <i class="fas fa-search"></i> Track
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="ticketDetails" class="ticket-details" style="display: none;">
+                <h2>Ticket Information</h2>
+                <div class="ticket-info">
+                    <div class="info-row">
+                        <span class="label">Status:</span>
+                        <span class="value status-badge">In Progress</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Created:</span>
+                        <span class="value">2024-01-20 10:30 AM</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Category:</span>
+                        <span class="value">Technical Issue</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Priority:</span>
+                        <span class="value priority-high">High</span>
+                    </div>
+                </div>
+
+                <div class="ticket-timeline">
+                    <h3>Ticket Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Ticket Created</h4>
+                                <p>Your ticket has been successfully created and assigned to our support team.</p>
+                                <span class="timeline-date">2024-01-20 10:30 AM</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Agent Assigned</h4>
+                                <p>John Smith has been assigned to your ticket.</p>
+                                <span class="timeline-date">2024-01-20 10:35 AM</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Agent Response</h4>
+                                <p>We are currently investigating your issue and will update you shortly.</p>
+                                <span class="timeline-date">2024-01-20 10:40 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="noTicketFound" class="no-ticket" style="display: none;">
+                <i class="fas fa-exclamation-circle"></i>
+                <h3>No Ticket Found</h3>
+                <p>We couldn't find a ticket with the provided number. Please check the number and try again.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="track-ticket.js"></script>
+</body>
+</html>

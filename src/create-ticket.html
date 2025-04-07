@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Support Ticket - Smart Retail Assistant</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="ticket.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-robot"></i>
+            <span>Smart Retail Assistant</span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="track-ticket.html" class="nav-link">Track Ticket</a>
+        </div>
+    </nav>
+
+    <main class="ticket-content">
+        <div class="ticket-container">
+            <h1><i class="fas fa-ticket-alt"></i> Create Support Ticket</h1>
+            
+            <form id="ticketForm" class="ticket-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Issue Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="technical">Technical Issue</option>
+                        <option value="billing">Billing Issue</option>
+                        <option value="product">Product Related</option>
+                        <option value="shipping">Shipping Issue</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Priority Level</label>
+                    <select id="priority" name="priority" required>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="6" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="attachments">Attachments (optional)</label>
+                    <input type="file" id="attachments" name="attachments" multiple>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Submit Ticket
+                    </button>
+                    <button type="reset" class="reset-btn">
+                        <i class="fas fa-undo"></i> Reset Form
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="ticket.js"></script>
+</body>
+</html>
